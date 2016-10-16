@@ -10,7 +10,7 @@
     copyright = "(c) Ram Rai Singh, 2015"
   }
 \markup { \vspace #2 }
-\markup {Zusammengestellt und arrangiert von Ram Rai Singh (Klaus Alfert).}
+\markup {Zusammengestellt und arrangiert von Ram Rai Singh.}
 \markup { \vspace #1 }
 
 \markuplist \table-of-contents
@@ -75,4 +75,11 @@
 
  \tocItem \markup "Wahre Guru Wahre Jio"
   \include "mountain-sadhana-mirabai/wahe-guru-wahe-jio-mirabai.ly"
-  \markup { \vspace #1 }
+\markup { \vspace #1 }
+
+\pageBreak 
+\tocCD \markup "Snatam Kaur: Anand Bliss"
+
+  \tocItem \markup "Mul Mantra"
+  \include "anand-bliss-snatam-kaur/mul-mantra.ly"
+\markup { \vspace #1 }
