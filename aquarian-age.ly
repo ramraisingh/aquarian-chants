@@ -1,14 +1,35 @@
 \version "2.18.0"
 #(ly:set-option 'relative-includes #t)
-  \include "paper.ily"
-  \header {
-    title = "Chants für das Wassermannzeitalter"
-    % Do not display the tagline for this book
-    % tagline = ##f
-    composer = ##f
-    meter = ##f
-    copyright = "(c) Ram Rai Singh, 2015"
-  }
+\include "paper.ily"
+\header {
+  title = "Chants für das Wassermannzeitalter"
+  %% instrument = "Chants für das Wassermannzeitalter"
+  %% Do not display the tagline for this book
+  %% tagline = ##f
+  composer = ##f
+  meter = ##f
+  copyright = "(c) Ram Rai Singh, 2015-2018"
+}
+%%%
+%%%oddHeaderMarkup = \markup
+%%%\fill-line {
+%%%  %% force the header to take some space, otherwise the
+%%%  %% page layout becomes a complete mess.
+%%%  " "
+%%%  \on-the-fly #not-part-first-page \fromproperty #'header:title
+%%%  \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-st
+%%%ring
+%%%}
+%%%
+%%%%% evenHeaderMarkup would inherit the value of
+%%%%% oddHeaderMarkup if it were not defined here
+%%%evenHeaderMarkup = \markup
+%%%\fill-line {
+%%%  \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string
+%%%  \on-the-fly #not-part-first-page \fromproperty #'header:title
+%%%  " "
+%%%}
+
 \markup { \vspace #2 }
 \markup {Zusammengestellt und arrangiert von Ram Rai Singh.}
 \markup { \vspace #1 }
@@ -37,6 +58,10 @@
   \include "peacefull-warrior-karta-singh/sat-siri-siri-akal-karta-singh.ly"
   \markup { \vspace #1 }
 
+\pageBreak
+ \tocItem \markup "Rakhe Rakhane Haar"
+  \include "peacefull-warrior-karta-singh/rakhe-rakhane-haar-karta-singh.ly"
+  \markup { \vspace #1 }
 \pageBreak
   \tocItem \markup "Wahe Guru Wahe Jio"
   \include "peacefull-warrior-karta-singh/wahe-guru-wahe-jio-karta-singh.ly"
@@ -82,4 +107,10 @@
 
   \tocItem \markup "Mul Mantra"
   \include "anand-bliss-snatam-kaur/mul-mantra.ly"
+\markup { \vspace #1 }
+
+\tocCD \markup "Tera Naam: In Thy Name"
+
+  \tocItem \markup "Sat Narayan"
+  \include "in-thy-name-tera-naam/sat-narayan.ly"
 \markup { \vspace #1 }
