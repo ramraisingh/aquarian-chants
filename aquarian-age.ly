@@ -8,7 +8,7 @@
   %% tagline = ##f
   composer = ##f
   meter = ##f
-  copyright = "(c) Ram Rai Singh, 2015-2018"
+  copyright = "(c) Ram Rai Singh, 2015-2019"
 }
 %%%
 %%%oddHeaderMarkup = \markup
@@ -85,11 +85,12 @@
   \include "guru-shabad-singh-khalsa/saresasa-guru-shabad-singh-khalsa.ly"
 \markup { \vspace #1 }
 
+
 \tocCD \markup "Mirabai Ceiba: Sacred Love Meditations"
 
   \tocItem \markup "Hummee hum, too mee too"
   \include "sacred-love-mirabei/humme-hum-too-he-too-mirabai.ly"
-\markup { \vspace #2 }
+\markup { \vspace #1 }
 
 \pageBreak
 \tocCD \markup "Mirabai Ceiba: Mountain Sadhana"
