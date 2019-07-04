@@ -22,6 +22,15 @@
 %%%		  (mute 6)
 %%%		  )}
 
+guitarIntro = \relative c {
+  cis8 gis' cis dis e dis cis gis |
+  cis,8 a' cis dis8 ~dis e8 dis cis |
+
+  cis,8 gis' cis dis e dis cis gis |
+  cis,8 a' cis dis8 ~dis e8 dis cis |
+}
+
+
 melodie =  \relative g' {
   \repeat "volta" 2 {
     %%  Sat Na -- ra -- yan Wa -- he Gu -- ru,
@@ -59,33 +68,55 @@ textI = \lyricmode {
 
 chordSymbols = \chordmode {
   \semiGermanChords
+  %% Intro
+  cis1:m cis:m6 
+  cis1:m cis:m6 
+  
+  %% Verse
   cis1:m fis:m fis:m cis1 |
 
   h a a h
   gis:m a a h 
 }
 
-\score { 
-       <<
-	 \context ChordNames {
-	   \set Score.markFormatter = #format-mark-box-letters
-	   \chordSymbols
-	 }
-	 \new Staff {
-	    \time 4/4
-	    \key cis \minor
-	     \new Voice = "mel" { \melodie  \bar "|." }
-	   }
-	   \new Lyrics \lyricsto "mel" {
-	     \textI
-	   }
-       >>
-	\layout {
-	  \context {\Staff \RemoveEmptyStaves }
-	}
-       \header {
-	 title = "Sat Narayan"
-	 composer = "Tera Naam"
-	 subtitle = "aus: In Thy Name"
-       }
+
+\score {
+  <<
+    \new Staff {
+      \clef "treble_8"
+      \key cis \minor
+      \guitarIntro
+      \break
+    }
+    \new TabStaff {
+      \tabFullNotation
+      \set TabStaff.minimumFret = #4
+      \set TabStaff.restrainOpenStrings = ##t
+      \guitarIntro
+    }
+    \context ChordNames {
+      \set Score.markFormatter = #format-mark-box-letters
+      \transpose d c \chordSymbols
+    }
+    \new Staff {
+      \time 4/4
+      \key cis \minor
+      \new Voice = "mel" {
+	R1*4
+	\melodie  \bar "|." }
+    }
+    \new Lyrics \lyricsto "mel" {
+      \textI
+    }
+  >>
+  \layout {
+    \context {\Staff \RemoveEmptyStaves }
+  }
+  \header {
+    title = "Sat Narayan"
+    composer = "Tera Naam"
+    subtitle = "aus: In Thy Name"
+    meter = "Capo 2. Bund"
+  }
 }
+\markup{Akkorde ohne Capo: A => H, G => A, Fism => Gism, Hm => Cism}
