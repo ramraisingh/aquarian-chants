@@ -8,7 +8,7 @@
   %% tagline = ##f
   composer = ##f
   meter = ##f
-  copyright = "(c) Ram Rai Singh, 2015-2019"
+  copyright = "(c) Ram Rai Singh, 2015-2020"
 }
 %%%
 %%%oddHeaderMarkup = \markup
@@ -95,15 +95,20 @@
 \pageBreak
 \tocCD \markup "Mirabai Ceiba: Mountain Sadhana"
 
-  \tocItem \markup "Mul Mantra"
-  \include "mountain-sadhana-mirabai/mul-mantra-mirabai.ly"
+  \tocItem \markup "Wah Yanti"
+  \include "mountain-sadhana-mirabai/wah-yantee-mirabei.ly"
 \markup { \vspace #1 }
 
+  \tocItem \markup "Mul Mantra"
+  \include "mountain-sadhana-mirabai/mul-mantra-mirabai.ly"
+\markup { \vspace #3 }
+
+\pageBreak 
  \tocItem \markup "Wahre Guru Wahre Jio"
   \include "mountain-sadhana-mirabai/wahe-guru-wahe-jio-mirabai.ly"
 \markup { \vspace #1 }
 
-\pageBreak 
+%% \pageBreak 
 \tocCD \markup "Snatam Kaur: Anand Bliss"
 
   \tocItem \markup "Mul Mantra"
