@@ -115,10 +115,10 @@ chordSymbolsI = \chordmode {
 
 chordSymbolsII = \chordmode {
   \semiGermanChords
-  f1 | c | a:m | e:m7 
-  f1 | c | a:m | e:m7 
-  f1 | c | a:m | e:m7 
-  f1 | c | a:m | e:m7 
+  f1 | a:m | e:m7 | a:m 
+  f1 | a:m | e:m7 | a:m 
+  f1 | a:m | e:m7 | a:m 
+  f1 | a:m | e:m7 | a:m 
 
 }
 \score { 
